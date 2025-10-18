@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organify - Organic Food Store</title>
 
-    <!-- 1. BOOTSTRAP (Load first) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- 2. FONT AWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!-- 4. YOUR CUSTOM CSS (Load last to override everything) -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -109,7 +106,8 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Pages <i class="fas fa-caret-down ms-1 d-none d-md-inline"></i>
+                  Pages
+                  <i class="fas fa-caret-down ms-1 d-none d-md-inline"></i>
                 </a>
                 <ul class="dropdown-menu">
                   <li>
@@ -227,6 +225,7 @@
           <img
             src="https://demo.casethemes.net/organify/wp-content/uploads/2024/10/product-3.png"
             alt="Fruit"
+            width="40"
             class="product-image"
           />
           <div class="price-tag"><span>$9.99</span><small> / kg</small></div>
@@ -312,175 +311,217 @@
 
     <!-- ----------- Tab ------------------------- -->
     <div class="productss-section">
-        <!-- Section Title -->
-        <h2 class="section-titles">
-            <span class="highlight">100% Organic</span>, Always Fresh, Guaranteed<br />
-            Quality Products
-        </h2>
+      <!-- Section Title -->
+      <h2 class="section-titles">
+        <span class="highlight">100% Organic</span>, Always Fresh, Guaranteed<br />
+        Quality Products
+      </h2>
 
-        <!-- Product Tabs -->
-        <div class="product-tabs">
-            <button class="tab-btn active" data-category="all">All Products</button>
-            <button class="tab-btn" data-category="vegan">Vegan</button>
-            <button class="tab-btn" data-category="crackers">Crackers</button>
-            <button class="tab-btn" data-category="fruits">Fruits</button>
-            <button class="tab-btn" data-category="sauce">Sauce</button>
-            <button class="tab-btn" data-category="vegan-curry">Vegan Curry</button>
+      <!-- Product Tabs -->
+      <div class="product-tabs">
+        <button class="tab-btn active" data-category="all">All Products</button>
+        <button class="tab-btn" data-category="vegan">Vegan</button>
+        <button class="tab-btn" data-category="crackers">Crackers</button>
+        <button class="tab-btn" data-category="fruits">Fruits</button>
+        <button class="tab-btn" data-category="sauce">Sauce</button>
+        <button class="tab-btn" data-category="vegan-curry">Vegan Curry</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grids" id="productsGrid">
+        <!-- Product 1 -->
+        <div class="product-cards" data-category="fruits">
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&h=400&fit=crop"
+              alt="Orange Fruit Spread"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Fruits</span>
+          <h3 class="product-titlee">
+            Crofters Peach Organic Premium Spread, 16.5 Oz
+          </h3>
+          <div class="product-prices">
+            <span class="current-price">$12.00</span>
+            <span>-</span>
+            <span class="current-price">$30.00</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
         </div>
 
-        <!-- Products Grid -->
-        <div class="products-grids" id="productsGrid">
-            <!-- Product 1 -->
-            <div class="product-cards" data-category="fruits">
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&h=400&fit=crop" alt="Orange Fruit Spread" class="product-image" />
-                </div>
-                <span class="product-categorys">Fruits</span>
-                <h3 class="product-titlee">Crofters Peach Organic Premium Spread, 16.5 Oz</h3>
-                <div class="product-prices">
-                    <span class="current-price">$12.00</span>
-                    <span>-</span>
-                    <span class="current-price">$30.00</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-cards" data-category="crackers">
-                <span class="discount-badge">26%</span>
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&h=400&fit=crop" alt="Asparagus Cream" class="product-image" />
-                </div>
-                <span class="product-categorys">Crackers</span>
-                <h3 class="product-titlee">The Good Bean Crunchy Chickpeas, Sea Salt</h3>
-                <div class="product-prices">
-                    <span class="current-price">$38.40</span>
-                    <span class="old-price">$52.00</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-cards" data-category="vegan">
-                <span class="discount-badge">84%</span>
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&h=400&fit=crop" alt="Coconut Oil" class="product-image" />
-                </div>
-                <span class="product-categorys">Vegan</span>
-                <h3 class="product-titlee">Cocomels Chocolate Covered Caramel BITES</h3>
-                <div class="product-prices">
-                    <span class="current-price">$3.18</span>
-                    <span class="old-price">$19.29</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-cards" data-category="vegan">
-                <span class="discount-badge">25%</span>
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&h=400&fit=crop" alt="Baking Soda" class="product-image" />
-                </div>
-                <span class="product-categorys">Vegan</span>
-                <h3 class="product-titlee">Relative Foods Aluminum Free Baking Soda</h3>
-                <div class="product-prices">
-                    <span class="current-price">$27.00</span>
-                    <span class="old-price">$36.00</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-cards" data-category="sauce">
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&h=400&fit=crop" alt="Organic Sauce" class="product-image" />
-                </div>
-                <span class="product-categorys">Sauce</span>
-                <h3 class="product-titlee">Organic Tomato Basil Pasta Sauce</h3>
-                <div class="product-prices">
-                    <span class="current-price">$8.99</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-cards" data-category="vegan-curry">
-                <span class="discount-badge">15%</span>
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop" alt="Vegan Curry" class="product-image" />
-                </div>
-                <span class="product-categorys">Vegan Curry</span>
-                <h3 class="product-titlee">Authentic Indian Vegan Curry Sauce</h3>
-                <div class="product-prices">
-                    <span class="current-price">$14.50</span>
-                    <span class="old-price">$17.00</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-cards" data-category="fruits">
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&h=400&fit=crop" alt="Dates" class="product-image" />
-                </div>
-                <span class="product-categorys">Fruits</span>
-                <h3 class="product-titlee">Organic Medjool Dates Premium Quality</h3>
-                <div class="product-prices">
-                    <span class="current-price">$18.00</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product-cards" data-category="crackers">
-                <span class="discount-badge">30%</span>
-                <div class="product-image-wrappers">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop" alt="Crackers" class="product-image" />
-                </div>
-                <span class="product-categorys">Crackers</span>
-                <h3 class="product-titlee">Whole Grain Organic Crackers Multi-Pack</h3>
-                <div class="product-prices">
-                    <span class="current-price">$21.00</span>
-                    <span class="old-price">$30.00</span>
-                </div>
-                <button class="add-to-cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    Add to cart
-                </button>
-            </div>
+        <!-- Product 2 -->
+        <div class="product-cards" data-category="crackers">
+          <span class="discount-badge">26%</span>
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&h=400&fit=crop"
+              alt="Asparagus Cream"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Crackers</span>
+          <h3 class="product-titlee">
+            The Good Bean Crunchy Chickpeas, Sea Salt
+          </h3>
+          <div class="product-prices">
+            <span class="current-price">$38.40</span>
+            <span class="old-price">$52.00</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
         </div>
 
-        <!-- More Products Button -->
-        <button class="more-products-btn mb-5">
-            More Products
-            <i class="fas fa-plus"></i>
-        </button>
+        <!-- Product 3 -->
+        <div class="product-cards" data-category="vegan">
+          <span class="discount-badge">84%</span>
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&h=400&fit=crop"
+              alt="Coconut Oil"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Vegan</span>
+          <h3 class="product-titlee">
+            Cocomels Chocolate Covered Caramel BITES
+          </h3>
+          <div class="product-prices">
+            <span class="current-price">$3.18</span>
+            <span class="old-price">$19.29</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-cards" data-category="vegan">
+          <span class="discount-badge">25%</span>
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&h=400&fit=crop"
+              alt="Baking Soda"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Vegan</span>
+          <h3 class="product-titlee">
+            Relative Foods Aluminum Free Baking Soda
+          </h3>
+          <div class="product-prices">
+            <span class="current-price">$27.00</span>
+            <span class="old-price">$36.00</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-cards" data-category="sauce">
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&h=400&fit=crop"
+              alt="Organic Sauce"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Sauce</span>
+          <h3 class="product-titlee">Organic Tomato Basil Pasta Sauce</h3>
+          <div class="product-prices">
+            <span class="current-price">$8.99</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-cards" data-category="vegan-curry">
+          <span class="discount-badge">15%</span>
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop"
+              alt="Vegan Curry"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Vegan Curry</span>
+          <h3 class="product-titlee">Authentic Indian Vegan Curry Sauce</h3>
+          <div class="product-prices">
+            <span class="current-price">$14.50</span>
+            <span class="old-price">$17.00</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-cards" data-category="fruits">
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&h=400&fit=crop"
+              alt="Dates"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Fruits</span>
+          <h3 class="product-titlee">Organic Medjool Dates Premium Quality</h3>
+          <div class="product-prices">
+            <span class="current-price">$18.00</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-cards" data-category="crackers">
+          <span class="discount-badge">30%</span>
+          <div class="product-image-wrappers">
+            <img
+              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop"
+              alt="Crackers"
+              class="product-image"
+            />
+          </div>
+          <span class="product-categorys">Crackers</span>
+          <h3 class="product-titlee">
+            Whole Grain Organic Crackers Multi-Pack
+          </h3>
+          <div class="product-prices">
+            <span class="current-price">$21.00</span>
+            <span class="old-price">$30.00</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+      </div>
+
+      <!-- More Products Button -->
+      <button class="more-products-btn mb-5">
+        More Products
+        <i class="fas fa-plus"></i>
+      </button>
     </div>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top-btn" id="scrollTopBtn">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <!------------------------ Gallery ------------------------>
@@ -1003,15 +1044,11 @@
       </div>
     </div>
 
-    <!-- JavaScript Dependencies -->
-    <!-- 1. jQuery (Required by Owl Carousel) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- 2. Bootstrap JS (Handles dropdowns and offcanvas menu) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- 4. Custom JS (Includes Navbar Hover Logic and Carousel Init) -->
     <script src="script.js"></script>
   </body>
 </html>
